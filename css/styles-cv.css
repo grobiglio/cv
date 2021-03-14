@@ -1,0 +1,24 @@
+/* Los colores los tomo desde aquí: https://colorhunt.co/palette/42191 */
+
+body {
+  background-color: #e3fdfd;
+  font-family: 'Merriweather', serif;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 6px;
+  width: 4%;
+  border-color: #71c9ce;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #71c9ce
+}
