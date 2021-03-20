@@ -151,3 +151,9 @@ hr {
   font-size: 0.75rem;
   padding: 20px 0;
 }
+
+@media (max-width: 675px){
+  .top-cloud, .bottom-cloud, .left-img, .right-img {
+    display: none;
+  }
+}
