@@ -44,19 +44,20 @@ hr {
 }
 
 .top-container {
-  background-color: #EAF6F6;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0a/Golden_Gate_Bridge_2021.jpg);
+  height: 640px;
+  background-position: center;
+  background-size: cover;
   margin: 0;
-  padding-top: 100px;
 }
 
-.top-cloud {
+.frase {
+  font-size: 1.25rem;
+  font-weight: bold;
   position: absolute;
-  right: 200px; top: 50px;
-}
-
-.bottom-cloud {
-  position: absolute;
-  left: 200px; bottom: 120px;
+  right: 20px;
+  top: 20px;
+  width: 50%;
 }
 
 .middle-container {
