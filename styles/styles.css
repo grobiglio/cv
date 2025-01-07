@@ -1,0 +1,122 @@
+/* Paleta de colores: https://colorhunt.co/palette/dcf2f17fc7d93654860f1035 */
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 2rem;
+}
+
+nav {
+    background-color: #7FC7D9;
+}
+
+footer {
+    background-color: #7FC7D9;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.navbar-brand {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.fondo-claro {
+    background-color: #DCF2F1;
+    color: #0F1035;
+    padding: 2rem 0 1rem;
+}
+
+.fondo-oscuro {
+    background-color: #365486;
+    color: white;
+    padding: 2rem 0 1rem;
+}
+
+.contenedor-inicio {
+    animation: goldenGate 5s linear;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0a/Golden_Gate_Bridge_2021.jpg);
+    background-size: cover;
+    height: 250px;
+    position: relative;
+}
+
+@keyframes goldenGate {
+    0% {
+        background-position: center;
+    }
+    100% {
+        background-position: top;
+    }
+}
+
+.contenedor-frase {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50%;
+  }
+
+.foto-perfil {
+    border-radius: 10px;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+.redes {
+    color: white;
+    margin: 25px;
+    text-decoration: none;
+}
+
+.redes:hover {
+    color: #7FC7D9;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (width < 576px) {
+    /*
+    .contenedor-frase {
+        background-color: blue;
+    }
+    */
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (576px <= width < 768px) {
+    /*
+    .contenedor-frase {
+        background-color: yellow;
+    }
+    */
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (768px <= width < 992px) {
+    /*
+    .contenedor-frase {
+        background-color: brown;
+    }
+    */
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (992px <= width < 1200px) {
+    /*
+    .contenedor-frase {
+        background-color: beige;
+    }
+    */
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (1200px <= width) {
+    /*
+    .contenedor-frase {
+        background-color: black;
+    }
+    */
+}
