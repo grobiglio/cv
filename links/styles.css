@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.lang-toggle a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: bold;
+}
+.name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.tagline {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0.5rem auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 80%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+.link-button i {
+    font-size: 1.2rem;
+}
+.link-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+footer {
+    margin-top: 3rem;
+    font-style: italic;
+    color: #495057;
+}
