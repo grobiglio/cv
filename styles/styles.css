@@ -73,6 +73,29 @@ nav a.nav-link:hover {
     line-height: 1.6;
 }
 
+.contacto-section {
+    background-color: #f8f9fa;
+    color: #1F2A44;
+}
+  
+.contacto-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.contacto-section .form-control {
+    border-radius: 0.25rem;
+}
+
+.contacto-section .btn-primary {
+    background-color: #0077B6;
+    border: none;
+}
+
+.contacto-section .btn-primary:hover {
+    background-color: #005f91;
+}
+
 footer {
     background-color: #1F2A44;
     color: #ffffff;
