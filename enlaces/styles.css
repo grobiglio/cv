@@ -1,86 +1,73 @@
 /* =========================================
-   ETAPA 3: SISTEMA VISUAL & BASE (Dark Theme)
+   ESTILOS DE PERFIL (Página A) - Refactor Dark Theme
+   Base: Identidad Visual "Herramientas IA"
    ========================================= */
 
 :root {
-  /* --- PALETA BASE --- */
-  --bg-body: #121212;            /* Fondo Negro Profundo */
-  --text-primary: #e0e0e0;       /* Texto Claro */
-  --text-secondary: #aaaaaa;     /* Texto Secundario (Gris) */
-  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  /* --- ACENTOS & NEON --- */
-  --accent-gold: #ffd700;        /* Dorado principal */
+    /* --- PALETA BASE --- */
+    --bg-body: #121212;            /* Fondo Negro Profundo */
+    --text-primary: #e0e0e0;       /* Texto Claro */
+    --text-secondary: #aaaaaa;     /* Texto Secundario (Gris) */
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
-  /* --- VARIABLES DE COMPONENTES (Las que faltaban) --- */
-  --radius-pill: 50px;           /* Define la forma redonda */
-  --btn-bg: #000000;             /* Fondo botón reposo */
-  --btn-bg-hover: #111111;       /* Fondo botón hover (ligeramente más claro) */
-  --btn-border: 2px solid var(--accent-gold);
-
-  /* Define el brillo neón en reposo y en hover */
-  --shadow-neon: 0 0 5px var(--accent-gold);
-  --shadow-neon-hover: 0 0 15px var(--accent-gold), 0 0 25px rgba(255, 215, 0, 0.3);
+    /* --- ACENTOS & NEON --- */
+    --accent-gold: #ffd700;        /* Dorado principal */
+    --accent-glow: rgba(255, 215, 0, 0.5); /* Resplandor difuso */
+    
+    /* --- VARIABLES DE COMPONENTES --- */
+    --radius-pill: 50px;           /* Forma de cápsula */
+    --btn-bg: #000000;             /* Fondo botón reposo */
+    --btn-bg-hover: #111111;       /* Fondo botón hover */
+    --btn-border: 2px solid var(--accent-gold);
+  
+    /* --- LUCES Y SOMBRAS --- */
+    --shadow-neon: 0 0 5px var(--accent-gold);
+    --shadow-neon-hover: 0 0 15px var(--accent-gold), 0 0 25px rgba(255, 215, 0, 0.3);
 }
 
 body {
-  background-color: var(--bg-body);
-  color: var(--text-primary);
-  font-family: var(--font-stack);
-  text-align: center;
-  padding: 2rem;
-  margin: 0;
-  min-height: 100vh; /* Asegura que el negro cubra toda la pantalla en móviles */
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* --- COMPONENTES DE PERFIL --- */
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  
-  /* CAMBIOS: */
-  /* 1. Borde un poco más claro (#444) para definir el límite de la foto */
-  border: 3px solid #444; 
-  
-  /* 2. En lugar de sombra negra, usamos una luz dorada muy suave (ambient light) */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15); 
-  
-  transition: all 0.3s ease;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    
+    /* Efecto "Ambient Light" */
+    border: 3px solid #333; 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15); /* Resplandor suave */
+    transition: all 0.3s ease;
 }
 
-/* Efecto extra: Si pasas el mouse por la foto, se "enciende" un poco */
 .profile-pic:hover {
-  border-color: var(--accent-gold);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
 }
-
-/* .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 2px solid #333; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-} */
 
 .name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff; /* Blanco puro para destacar nombre */
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .tagline {
-  font-size: 1rem;
-  color: var(--text-secondary); /* Gris atenuado para jerarquía */
-  margin-bottom: 2.5rem;
-  font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
 }
 
 .lang-toggle {
@@ -89,128 +76,102 @@ body {
     right: 20px;
 }
 
-/* Ajuste temporal para que el link de idioma se vea en fondo negro */
 .lang-toggle a {
     text-decoration: none;
     font-size: 0.9rem;
-    color: var(--accent-gold); /* Dorado */
+    color: var(--accent-gold);
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* =========================================
-   AQUÍ COMIENZAN LOS BOTONES (Etapa 4 pendiente)
-   (Mantener tu código actual de .link-button abajo)
-   ========================================= */
+.lang-toggle a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--accent-glow);
+    text-decoration: none;
+}
 
-/* =========================================
-   ETAPA 4: BOTONES & INTERACCIÓN (Neon Style)
-   ========================================= */
+/* --- BOTONES DE ENLACE (Estilo Neon Pill) --- */
 
 .link-button {
-    /* --- ESTRUCTURA (Heredado de Pág A) --- */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Un poco más de aire entre icono y texto */
+    gap: 12px;
     width: 80%;
     max-width: 400px;
-    margin: 1rem auto; /* Separación vertical mejorada */
-    padding: 1rem 1.5rem; /* Botones un poco más "gorditos" para tocar fácil en móvil */
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
     text-decoration: none;
     
-    /* --- FORMA (Manteniendo identidad Pág A) --- */
-    border-radius: var(--radius-pill); /* 50px */
+    /* Estética */
+    border-radius: var(--radius-pill);
+    background-color: var(--btn-bg);
+    color: #ffffff;
+    border: var(--btn-border);
+    box-shadow: var(--shadow-neon);
     
-    /* --- ESTÉTICA (Importado de Pág B) --- */
-    background-color: var(--btn-bg); /* Negro (#000) */
-    color: #ffffff;                  /* Texto Blanco */
-    border: var(--btn-border);       /* Borde Dorado Sólido */
-    box-shadow: var(--shadow-neon);  /* Resplandor suave inicial */
+    /* Tipografía */
+    font-size: 1.1rem;
+    font-weight: 600;
     
-    /* --- TIPOGRAFÍA --- */
-    font-size: 1.1rem; /* Ligeramente más grande para legibilidad */
-    font-weight: 600;  /* Semi-bold para que destaque sobre el negro */
-    
-    /* --- TRANSICIONES --- */
     transition: all 0.3s ease;
 }
 
-/* Coloreamos los iconos de FontAwesome de dorado */
 .link-button i {
     font-size: 1.3rem;
     color: var(--accent-gold);
     transition: transform 0.3s ease;
 }
 
-/* --- ESTADO HOVER (El efecto "Neon") --- */
+/* Estado Hover */
 .link-button:hover {
-    background-color: var(--btn-bg-hover); /* Gris muy oscuro (#111) */
-    box-shadow: var(--shadow-neon-hover);  /* Resplandor intenso (15px) */
-    transform: scale(1.03);                /* Efecto de "acercarse" */
-    color: #ffffff;                        /* Aseguramos que el texto siga blanco */
+    background-color: var(--btn-bg-hover);
+    box-shadow: var(--shadow-neon-hover);
+    transform: scale(1.03);
+    color: #ffffff;
 }
 
-/* Efecto extra: el icono gira sutilmente o crece al pasar el mouse */
 .link-button:hover i {
     transform: scale(1.1);
 }
 
-/* --- ESTADO ACTIVE (Click) --- */
+/* Estado Active (Click) */
 .link-button:active {
-    transform: scale(0.98); /* Pequeño rebote al hacer click */
-    box-shadow: 0 0 5px var(--accent-gold); /* El brillo se contrae */
+    transform: scale(0.98);
+    box-shadow: 0 0 5px var(--accent-gold);
 }
 
-/* =========================================
-   ETAPA 5: PULIDO FINAL & DETALLES
-   ========================================= */
+/* --- PIE DE PÁGINA --- */
 
-/* 1. Footer: Alineado visualmente con Pág B */
-/* Aunque no podemos hacerlo 'full-width' sin tocar HTML,
-   le damos el mismo tratamiento de borde y color. */
 footer {
-    margin-top: 4rem;           /* Mucho más aire arriba para separar del contenido */
-    padding-top: 2rem;          /* Espacio interno superior */
-    border-top: 1px solid #333; /* La línea divisoria sutil (igual a Pág B) */
-    color: #888;                /* Gris tenue para texto secundario */
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #888;
     font-size: 0.9rem;
-    font-style: normal;         /* Quitamos la cursiva para un look más moderno/técnico */
+    font-style: normal;
     line-height: 1.6;
+    opacity: 0.8;
 }
 
-/* 2. Link de Idioma: Feedback visual mejorado */
-.lang-toggle a {
-    position: relative;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
+/* --- UTILIDADES --- */
 
-.lang-toggle a:hover {
-    color: #ffffff;             /* Blanco puro al pasar el mouse */
-    text-shadow: 0 0 10px var(--accent-glow); /* Pequeño brillo dorado */
-    text-decoration: none;      /* Quitamos el subrayado estándar */
-}
-
-/* 3. Selección de texto "Cyberpunk" */
-/* Pequeño detalle de calidad: cuando el usuario selecciona texto,
-   se pinta de dorado con texto negro, en lugar del azul estándar. */
 ::selection {
     background-color: var(--accent-gold);
     color: #000000;
 }
 
-/* 4. Ajustes Responsive (Móvil) */
 @media (max-width: 480px) {
     body {
-        padding: 1.5rem 1rem; /* Aprovechamos mejor el ancho en celulares */
+        padding: 1.5rem 1rem;
     }
-    
     .link-button {
-        width: 100%; /* Botones ocupan todo el ancho disponible en móvil */
-        font-size: 1rem; /* Ajuste óptico */
+        width: 100%;
+        font-size: 1rem;
     }
-    
     .profile-pic {
-        width: 120px; /* Foto un poco más chica para que entre todo "above the fold" */
+        width: 120px;
         height: 120px;
     }
 }
