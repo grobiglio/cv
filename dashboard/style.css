@@ -1,0 +1,89 @@
+:root {
+    /* Definimos el fondo como negro puro para máxima legibilidad y para fundir el logo. */
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    /* Usamos un gris muy oscuro para los fondos de los iconos para un look minimalista. */
+    --icon-bg: #1a1a1a;
+    --icon-hover: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor del Logo: Ahora solo centra el logo sin bordes. */
+.logo-container {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Estilo para la imagen del logo. El cuadrado negro del logo original se funde con el fondo. */
+.logo-image {
+    max-width: 250px;
+    height: auto;
+    /* Aseguramos que el logo se vea nítido. */
+    image-rendering: auto;
+}
+
+/* Grilla de Aplicaciones (manteniendo la estructura original) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+    justify-items: center;
+}
+
+.shortcut {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    width: 100px;
+}
+
+.shortcut:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenedor del icono con un fondo oscuro sutil */
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #fff; /* Asegura que los iconos sean blancos por defecto. */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.shortcut span {
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Colores específicos para algunos iconos (opcional y manteniendo los de la imagen original) */
+.fa-whatsapp { color: #25D366; }
+.fa-github { color: #fff; }
+
+/* Ajustes para el hover de los iconos */
+.shortcut:hover .icon-wrapper {
+    background-color: var(--icon-hover);
+}

@@ -6,98 +6,7 @@
     <title>INGGAR - Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        :root {
-            /* Definimos el fondo como negro puro para máxima legibilidad y para fundir el logo. */
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            /* Usamos un gris muy oscuro para los fondos de los iconos para un look minimalista. */
-            --icon-bg: #1a1a1a;
-            --icon-hover: #333333;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        /* Contenedor del Logo: Ahora solo centra el logo sin bordes. */
-        .logo-container {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        /* Estilo para la imagen del logo. El cuadrado negro del logo original se funde con el fondo. */
-        .logo-image {
-            max-width: 250px;
-            height: auto;
-            /* Aseguramos que el logo se vea nítido. */
-            image-rendering: auto;
-        }
-
-        /* Grilla de Aplicaciones (manteniendo la estructura original) */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 20px;
-            width: 90%;
-            max-width: 900px;
-            justify-items: center;
-        }
-
-        .shortcut {
-            text-decoration: none;
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s;
-            width: 100px;
-        }
-
-        .shortcut:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Contenedor del icono con un fondo oscuro sutil */
-        .icon-wrapper {
-            width: 50px;
-            height: 50px;
-            background-color: var(--icon-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-            color: #fff; /* Asegura que los iconos sean blancos por defecto. */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .shortcut span {
-            font-size: 0.85rem;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        /* Colores específicos para algunos iconos (opcional y manteniendo los de la imagen original) */
-        .fa-whatsapp { color: #25D366; }
-        .fa-github { color: #fff; }
-
-        /* Ajustes para el hover de los iconos */
-        .shortcut:hover .icon-wrapper {
-            background-color: var(--icon-hover);
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -112,9 +21,19 @@
             <span>ChatGPT</span>
         </a>
 
+        <a href="https://gemini.google.com/" class="shortcut" target="_blank">
+            <div class="icon-wrapper"><i class="fas fa-sparkles" style="color: #4285f4;"></i></div>
+            <span>Gemini</span>
+        </a>
+
+        <a href="https://notebooklm.google.com/" class="shortcut" target="_blank">
+            <div class="icon-wrapper"><i class="fas fa-book" style="color: #0f9d58;"></i></div>
+            <span>NotebookLM</span>
+        </a>
+
         <a href="https://web.whatsapp.com" class="shortcut" target="_blank">
             <div class="icon-wrapper"><i class="fab fa-whatsapp"></i></div>
-            <span>(1) WhatsApp</span>
+            <span>WhatsApp</span>
         </a>
 
         <a href="https://ingg.ar/herramientas-ia/" class="shortcut">
@@ -132,7 +51,7 @@
             <span>Hostinger</span>
         </a>
 
-        <a href="data:text/html,<html contenteditable>" class="shortcut">
+        <a href="#" onclick="let w = window.open(); w.document.write('<html contenteditable><title>Notepad</title>'); w.document.close(); return false;" class="shortcut">
             <div class="icon-wrapper"><i class="fas fa-circle" style="color: #e91e63;"></i></div>
             <span>Notepad</span>
         </a>
@@ -142,9 +61,19 @@
             <span>GitHub</span>
         </a>
 
-        <a href="#" class="shortcut">
-            <div class="icon-wrapper"><i class="fas fa-plus"></i></div>
-            <span>Acceso directo</span>
+        <a href="https://www.google.com/" class="shortcut" target="_blank">
+            <div class="icon-wrapper"><i class="fab fa-google"></i></div>
+            <span>Google</span>
+        </a>
+
+        <a href="https://www.youtube.com/" class="shortcut" target="_blank">
+            <div class="icon-wrapper"><i class="fab fa-youtube" style="color: #ff0000;"></i></div>
+            <span>YouTube</span>
+        </a>
+
+        <a href="https://music.youtube.com/" class="shortcut" target="_blank">
+            <div class="icon-wrapper"><i class="fas fa-music" style="color: #ff0000;"></i></div>
+            <span>YouTube Music</span>
         </a>
 
     </div>
