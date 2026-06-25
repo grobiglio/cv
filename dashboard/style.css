@@ -102,3 +102,13 @@ body {
        puedes cambiar 'cover' por 'contain' y ajustar el width/height al 70% o 80%. */
     object-fit: cover; 
 }
+
+@media (max-width: 768px) {
+    .shortcut {
+        display: none;
+    }
+
+    .shortcut.mobile-visible {
+        display: flex;
+    }
+}
